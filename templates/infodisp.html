@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Viewing Employee Pay History</title>
+   <style>
+	table, th, td {
+		border: 1px solid black;
+		}
+	#t01 {
+		 width: 100%;    
+ 		 background-color: #f1f1c1;
+}
+</style>
+  </head>
+  <body bgcolor = "pink">
+	<table class="w3-table-all" id="t01">
+	<thead>
+		<tr style ="background-color:powderblue;">
+			<th>BusinessEntityID</th>
+			<th>RateChangeDate</th>
+			<th>Rate</th>
+			<th>PayFrequency</th>
+			<th>ModifiedDate</th>
+		</tr>
+	</thead>
+	<tbody>
+		{% for row in data %}
+		<tr>
+			<td>{{row[0]}}</td>
+			<td>{{row[1]}}</td>
+			<td>{{row[2]}}</td>
+			<td>{{row[3]}}</td>
+			<td>{{row[4]}}</td>
+		</tr>
+		{% endfor %}
+	</tbody>
+	</table>
+</body
+</html>
